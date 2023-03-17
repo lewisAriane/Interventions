@@ -17,7 +17,9 @@ describe('ProblemeComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('#1 | Zone PRÉNOM invalide avec 2 caractères', () => { 
+    let prenom = component.problemeForm.controls['prenom'];
+    prenom.setValue('a'.repeat(2));
+    expect(prenom.valid).toBeFalsy();
   });
 });
