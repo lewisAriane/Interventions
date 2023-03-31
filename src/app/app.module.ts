@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { ProblemeComponent } from './probleme/probleme.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import {HttpClientModule } from '@angular/common/http';
+import { ProblemeData } from './probleme/typeProbleme-data';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 @NgModule({
   declarations: [
@@ -16,9 +19,12 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(ProblemeData, {delay: 1000})
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+s
