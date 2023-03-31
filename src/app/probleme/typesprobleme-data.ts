@@ -1,4 +1,4 @@
-import { ITypeProbleme } from "./typeProbleme";
+import { ITypeProbleme } from "./typesprobleme";
 import { InMemoryDbService } from "angular-in-memory-web-api"
 
 export class ProblemeData implements InMemoryDbService {

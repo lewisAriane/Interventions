@@ -7,7 +7,7 @@ import { AcceuilComponent } from './acceuil/acceuil.component';
 import { ProblemeComponent } from './probleme/probleme.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule } from '@angular/common/http';
-import { ProblemeData } from './probleme/typeProbleme-data';
+import { ProblemeData } from './probleme/typesprobleme-data';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 @NgModule({
@@ -27,4 +27,3 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-s

@@ -2,18 +2,18 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
-import { ITypeProbleme } from './typeProbleme';
+import { ITypeProbleme } from './typesprobleme';
 
 @Injectable({
   providedIn: 'root'
 })
-export class TypeProblemeService {
-  private baseUrl = 'api/typeProbleme';
+export class TypesproblemeService {
+  private baseUrl = 'api/typesprobleme';
   constructor(private http: HttpClient) { }
 
-  obtenirTypeProbleme(): Observable<ITypeProbleme[]> {
+  obtenirTypesProbleme(): Observable<ITypeProbleme[]> {
     return this.http.get<ITypeProbleme[]>(this.baseUrl).pipe(
-        tap(data => console.log('obtenirTypeProbleme: ' + JSON.stringify(data))),
+        tap(data => console.log('obtenirTypesProbleme: ' + JSON.stringify(data))),
         catchError(this.handleError)
     );
   }
