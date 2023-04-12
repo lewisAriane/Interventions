@@ -30,7 +30,7 @@ export class ProblemeComponent implements OnInit {
         courriel: [{value: '', disabled: true}],
         courrielConfirmation: [{value: '', disabled: true}],
       }),
-    telephone: [{value: '', disabled: true}],
+      telephone: [{value: '', disabled: true}],
     });
   
     this.typesprobleme.obtenirTypesProbleme()
@@ -74,7 +74,7 @@ export class ProblemeComponent implements OnInit {
         if(typeNotification === 'ParTelephone')
         {
           telephoneControl.enable();     
-          telephoneControl.setValidators([Validators.required]);  
+          telephoneControl.setValidators([Validators.required, Validators.pattern('[0-9]+'), Validators.minLength(10), Validators.maxLength(10)]);
         }
         else if(typeNotification === 'PasNotifier'){
           courrielControl.disable();  
